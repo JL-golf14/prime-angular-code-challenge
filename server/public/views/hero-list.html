@@ -3,7 +3,7 @@
 
 
 
-    <form class="form" ng-submit="tracker.addEmployee()">
+    <form class="form" ng-submit="tracker.addHero()">
         <label for="empFirstName">persona
           <input type="text"  ng-model="hlc.newHero.persona" />
         </label>
@@ -16,7 +16,7 @@
           <input type="text"ng-model="hlc.newHero.power_id"/>
         </label>
 
-        <button ng-click="hlc.addHero()">Click here to add a new Hero!</button>
+        <button class="btn" "btn-default" ng-click="hlc.addHero()">Click here to add a new Hero!</button>
       </form>
 
 
@@ -27,7 +27,7 @@
 <br>
 
 
-    <table>
+    <table class="table-striped">
       <tr>
 
 
@@ -44,10 +44,11 @@
       <tbody>
         <tr ng-repeat="hero in hlc.heroesList">
 
-          <td>{{hero.persona}}</td>
-          <td>{{hero.alias}}</td>
+          <td>  <input ng-model="hero.persona"/></td>
+          <td><input ng-model="hero.alias"/></td>
           <td>{{hero.power_id}}</td>
           <td> <button ng-click="hlc.deleteHero(hero.id)">kill this hero???? </button></td>
+                <td><button ng-click="hlc.updateHero(hero)">Update the hero</button></td>
         </tr>
       </tbody>
   </table>

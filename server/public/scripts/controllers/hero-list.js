@@ -1,11 +1,12 @@
 app.controller('HeroListController',['$http', function($http){
     console.log('Hero List Controller loaded');
+
 var self = this;
-
-
-
  self.heroesList = [];
 self.newHero = {};
+self.updateHero = {};
+
+
 getHero();
 function getHero(){
   $http({
@@ -47,7 +48,17 @@ self.deleteHero = function(heroId){
 
 
 
+self.updateHero = function(hero){
+  $http({
+  method: 'PUT',
+  url:'/heroes/'+ hero.id,
+  data: hero
 
+}).then(function(response){
+  console.log(response);
+  getHero();
+});
+}
 
 
 
