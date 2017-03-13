@@ -53,7 +53,6 @@ self.updateHero = function(hero){
   method: 'PUT',
   url:'/heroes/'+ hero.id,
   data: hero
-
 }).then(function(response){
   console.log(response);
   getHero();
