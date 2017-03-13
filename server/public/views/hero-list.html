@@ -26,7 +26,13 @@
 <br>
 <br>
 <br>
+<table>
+  <th>LIST OF POWERS</th>
+<tr ng-repeat="hero in hlc.heroesList">
+  <td>{{hero.name}}</td>
 
+  </tr>
+</table>
 
     <table class="table-striped">
       <tr>
@@ -48,6 +54,7 @@
           <td>  <input ng-model="hero.persona"/></td>
           <td><input ng-model="hero.alias"/></td>
           <td>{{hero.power_id}}</td>
+            <td>{{hero.name}}</td>
           <td>{{hero.description}}</td>
           <td> <button ng-click="hlc.deleteHero(hero.id)">kill this hero???? </button></td>
                 <td><button ng-click="hlc.updateHero(hero)">Update the hero</button></td>
