@@ -1,2 +1,53 @@
-<p>This should show a list of all heroes in the system, displaying all the information from the entry captured in the view before. 
+<p>This should show a list of all heroes in the system, displaying all the information from the entry captured in the view before.
     Each hero in the listing needs to be able to be deleted from the system in the event of their unfortunate demise.</p>
+
+
+
+    <form class="form" ng-submit="tracker.addEmployee()">
+        <label for="empFirstName">persona
+          <input type="text"  ng-model="hlc.newHero.persona" />
+        </label>
+
+        <label for="empLastName">alias
+          <input type="text"  ng-model="hlc.newHero.alias" />
+        </label>
+
+        <label for="empIDNumber">ID Number:
+          <input type="text"ng-model="hlc.newHero.power_id"/>
+        </label>
+
+        <button ng-click="hlc.addHero()">Click here to add a new Hero!</button>
+      </form>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+    <table>
+      <tr>
+
+
+      <th>Persona</th>
+      <th>alias</th>
+      <th>superpowers</th>
+      </tr>
+
+
+
+
+
+
+      <tbody>
+        <tr ng-repeat="hero in hlc.heroesList">
+
+          <td>{{hero.persona}}</td>
+          <td>{{hero.alias}}</td>
+          <td>{{hero.power_id}}</td>
+          <td> <button ng-click="hlc.deleteHero(hero.id)">kill this hero???? </button></td>
+        </tr>
+      </tbody>
+  </table>
