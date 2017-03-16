@@ -1,0 +1,19 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url("El tercer hombre.ttf");
+}
+
+h1 {
+  font-family: myFirstFont !important;
+  font-size:100px !important;
+}
+a{
+  font-size: 25px;
+  display:inline-table;
+}
+.jumbotron{
+
+}
+th{
+  font-size: 35px;
+}

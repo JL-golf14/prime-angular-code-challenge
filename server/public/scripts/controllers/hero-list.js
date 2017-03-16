@@ -20,17 +20,17 @@ function getHero(){
 
 
 
-self.addHero =function(){
-    $http({
-    method: 'POST',
-    url:'/heroes',
-    data:self.newHero
-  }).then(function(response){
-    console.log(response);
-    getHero();
-    self.newHero = {};
-  });
-}
+// self.addHero =function(){
+//     $http({
+//     method: 'POST',
+//     url:'/heroes',
+//     data:self.newHero
+//   }).then(function(response){
+//     console.log(response);
+//     getHero();
+//     self.newHero = {};
+//   });
+// }
 
 
 self.deleteHero = function(heroId){

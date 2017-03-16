@@ -3,36 +3,12 @@
 
 
 
-    <form class="form" ng-submit="tracker.addHero()">
-        <label >persona
-          <input type="text"  ng-model="hlc.newHero.persona" />
-        </label>
-
-        <label >alias
-          <input type="text"  ng-model="hlc.newHero.alias" />
-        </label>
-
-        <label >super Power NUMBER
-          <input type="text"ng-model="hlc.newHero.power_id"/>
-        </label>
-
-
-        <button class="btn" "btn-default" ng-click="hlc.addHero()">Click here to add a new Hero!</button>
-      </form>
-
-
 
 <br>
 <br>
 <br>
 <br>
-<table>
-  <th>LIST OF POWERS</th>
-<tr ng-repeat="hero in hlc.heroesList">
-  <td>{{hero.name}}</td>
 
-  </tr>
-</table>
 
     <table class="table-striped">
       <tr>

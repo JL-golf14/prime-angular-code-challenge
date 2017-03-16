@@ -3,33 +3,30 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Department of Emerging Superhero Knowledge</title>
+  <div container>
+
+
+  <title class="jumbotron">Department of Emerging Superhero Knowledge</title>
+  </div>
   <script src="vendors/angular.min.js" charset="utf-8"></script>
   <script src="vendors/angular-route.min.js" charset="utf-8"></script>
   <script src="scripts/client.js" charset="utf-8"></script>
   <script src="scripts/controllers/hero-list.js" charset="utf-8"></script>
-  <!-- <script src="vendors/bootstrap.min.css" charset="utf-8"></script> -->
-</head>
+  <script src="scripts/controllers/add-hero.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="stylesheet/styles.css">
+  <link rel="stylesheet" href="vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/bootstrap.css">
+  <!-- <link rel="stylesheet" href="stylesheet/El tercer hombre.ttf"> -->
+
+  </head>
 
 <body ng-app="HeroApp">
+  <nav ng-include="'views/nav.html'"> </nav>
   <h1>Department of Emerging Superhero Knowledge</h1>
-  <nav>
-    <ul>
-      <li><a href="#!heroList">Hero List</a></li>
-      <li><a href="#!addHero">Add New Hero</a></li>
-    </ul>
-  </nav>
+
   <main ng-view></main>
 </body>
 
 
 
-<table>
-  <th>LIST OF POWERS</th>
-<tr ng-repeat="hero in hlc.heroesList">
-  <td>{{hero.name}}</td>
-
-
-  </tr>
-</table>
 </html>
